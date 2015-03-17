@@ -1,0 +1,272 @@
+body {
+	margin-top: -16px;
+}
+
+.container {
+  /*width: 100%;*/
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+
+/*****HEADER TOP*****/
+.header__top {
+	height: 30px;
+	background-color: #303030;
+}
+
+.header__top-language ul {
+	list-style-type: none;
+}
+
+.header__top-language ul li {
+	text-transform: uppercase;
+	float: left;
+	padding: 0 10px;
+	border-right: 2px solid #c4c3c5;
+	margin: 6px 0;
+	color: #c4c3c5;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.header__top-language ul li:last-child {
+	border-right: none;
+}
+
+.header__top-link {
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 44%;
+}
+
+.header__top-link p {
+padding-top: 6px;
+}
+
+.header__top-link a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+.header__top-link a:hover {
+	text-decoration: none;
+}
+/*****HEADER CONTENT*****/
+.header__content {
+	background-image: url("images/pattern.png");
+}
+
+.header__content-topmenu ul {
+	list-style-type: none;
+}
+
+.header__content-topmenu ul li,
+.header__content-metamenu ul li {
+	float: left;
+	padding: 5px 12px;
+	border-left: 2px solid #4a8fbe;
+	color: #434343;
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: 10px;
+}
+
+.header__content-topmenu ul li:last-child,
+.header__content-metamenu ul li:last-child {
+	border-right: 2px solid #4a8fbe;
+}
+
+.logo-title {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.logo-title img {
+	width: 160px;
+
+}
+
+.logo-title h1 {
+	color: #4a8fbe;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	font-weight: normal;
+	font-size: 36px;
+}
+
+.header__content-metamenu ul {
+	list-style-type: none;
+	float: right;
+}
+
+
+.header__content-claim {
+	text-align: center;
+}
+
+.header__content-claim p {
+	line-height: 26px;
+	font-size: 18px;
+}
+
+.header__content-search input {
+	height: 70px;
+	width: 540px;
+	padding: 0 20px;
+	font-size: 22px;
+	border: 2px solid #4a8fbe;
+	margin-top: 40px;
+	background-image: url("images/search-icon.png");
+	background-repeat: no-repeat;
+	background-position: 95%;
+}
+
+
+.header__content-search {
+	padding-bottom: 20px;
+}
+
+.header__content-tags ul {
+	list-style-type: none;
+	margin-bottom: 0px;
+}
+
+.header__content-tags ul li {
+	margin-right: 5px;
+}
+
+.header__content-tags ul li a {
+	border: 1px solid #4a8fbe;
+	text-decoration: none;
+	color: #4a8fbe;
+	padding: 2px 8px;
+	font-size: 14px;
+	border-radius: 10px;
+}
+
+/*****CONTENT*****/
+.content {
+	background-color: #e2e2e2;
+	min-height: 400px;
+}
+
+.data-menu {
+	margin-bottom: 90px;
+}
+
+.content__data ,
+.content__project {
+	margin-bottom: 30px;
+}
+
+.content__data ul,
+.content__project ul {
+	list-style-type: none;
+	margin-top: 30px;
+}
+
+.content__data ul li,
+.content__project ul li {
+	float: left;
+	padding: 0 20px;
+	line-height: 30px;
+	font-size: 19px;
+	font-weight: bold;
+}
+
+.content__data ul li a,
+.content__project ul li a {
+	color: #808184;
+	text-decoration: none;
+}
+
+li.first {
+	border-right: 2px solid #4a8fbe;
+}
+
+a.button {
+	color: #fff;
+	padding: 10px 15px;
+	background-color: #4a8fbe;
+	border-radius: 4px;
+	text-decoration: none;
+	float: right;
+	font-width: bold;
+}
+
+.data-box {
+	min-height: 95px;
+	background-color: #fff;
+	margin-top: 10px;
+	margin-left: 60px;
+}
+
+.data-box h3 {
+	margin: 0px;
+	color: #434343;
+	font-size: 17px;
+	padding: 10px 10px 0px 10px;
+}
+
+.data-box p.data-meta-infos {
+	margin-top: 6px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #bbbdbf;
+	padding-left: 10px;
+	margin-bottom: 0px;
+}
+
+.data-box p.data-content {
+	font-size: 15px;
+	color: #808184;
+	border-top: 1px solid #bbbdbf;
+	padding: 5px 10px 10px 10px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+.data-box p.data-count {
+	font-size: 15px;
+	color: #808184;
+	float: right;
+	padding-right: 10px;
+
+}
+
+/*****FOOTER*****/
+footer {
+	height: 105px;
+	background-color: #303030;
+}
+
+.footer__links ul {
+	list-style-type: none;
+	margin-top: 30px;
+}
+
+.footer__links ul li {
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 22px;
+}
+
+.footer__text p {
+	float: right;
+	color: #e2e2e2;
+	margin-top: 45px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.footer__text p a {
+	color: #fff;
+}
+
+.footer__text p a:hover {
+	text-decoration: none;
+}
