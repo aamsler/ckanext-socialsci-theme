@@ -9,6 +9,38 @@ body {
   padding: 0 30px;
 }
 
+/*****ACCOUNT HEADER*****/
+.account-masthead {
+    min-height: 30px;
+    color: #FFF;
+    color: #FFF;
+	line-height: 20px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.account-masthead .account ul li {
+    display: block;
+    float: left;
+    border-left: 1px solid #00232E;
+    list-style: outside none none;
+    padding: 0px 10px;
+}
+
+.account-masthead .account ul::before, .account-masthead .account ul::after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
+
+.account-masthead::after {
+    clear: both;
+}
+.account-masthead::before, .account-masthead::after {
+    display: table;
+    content: "";
+    line-height: 0;
+}
 
 /*****HEADER TOP*****/
 .header__top {
