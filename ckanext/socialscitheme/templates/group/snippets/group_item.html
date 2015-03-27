@@ -15,7 +15,12 @@ group - A group dict.
     </a>
   {% endblock %}
   {% block datasets %}
-    <p class="data-count">Number of Datasets: {{ group.packages|count }}</p>
+    {% if group.packages is number%}
+      {% set packages = group.packages %}
+    {% else %}
+      {% set packages = group.packages|count %}
+    {% endif %}
+    <p class="data-count">Number of Datasets: {{ packages }}</p>
   {% endblock %}
   {% endblock %}
 </div>
