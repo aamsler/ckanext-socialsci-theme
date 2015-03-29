@@ -163,18 +163,34 @@ body {
 	font-size: 18px;
 }
 
+.header__content-search {
+    padding-bottom: 20px;
+    height: 70px;
+    width: 580px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
 .header__content-search input {
 	height: 70px;
 	width: 540px;
 	padding: 0 20px;
 	font-size: 22px;
 	border: 2px solid #4a8fbe;
-	margin-top: 40px;
-	background-image: url("images/search-icon.png");
-	background-repeat: no-repeat;
-	background-position: 95%;
 }
 
+.header__content-search button {
+    background-size: 100%;
+    content: '';
+    height: 38px;
+    width:38px;
+	background-image: url("images/search-icon.png");
+	position: absolute;
+	top: 18px;
+	right: 18px;
+}
 
 .header__content-search {
 	padding-bottom: 20px;

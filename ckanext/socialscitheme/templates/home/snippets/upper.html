@@ -25,10 +25,14 @@
           <div class="grid">
             <div class="grid__col grid__col--4-of-5 grid__col--centered header__content-claim">
               <p>search. explore. reuse.</p>
-
+              <form class="module-content search-form" method="get" action="{% url_for controller='package', action='search' %}">
               <div class="header__content-search">
                 <input type="text" class="search" name="q" value="" autocomplete="off" placeholder="Search" />
+                <button type="submit">
+                  <i class="icon-search-big"></i>
+                </button>
               </div>
+              </form>
               <div class="header__content-tags">
                 <h3>Most searched tags:</h3>
                 {% set tags = h.get_facet_items_dict('tags', limit=3) %}
