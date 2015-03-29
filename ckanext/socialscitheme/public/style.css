@@ -52,7 +52,7 @@ body {
 	list-style-type: none;
 }
 
-.header__top-language ul li {
+.header__top-language ul li a {
 	text-transform: uppercase;
 	float: left;
 	padding: 0 10px;
@@ -61,6 +61,7 @@ body {
 	color: #c4c3c5;
 	font-size: 14px;
 	font-weight: bold;
+	decoration: none;
 }
 
 .header__top-language ul li:last-child {
@@ -104,6 +105,13 @@ padding-top: 6px;
 	font-size: 14px;
 	font-weight: bold;
 	margin-top: 10px;
+}
+
+
+.header__content-topmenu ul li a,
+.header__content-metamenu ul li a {
+	color: #434343;
+	decoration: none;
 }
 
 .header__content-topmenu ul li:last-child,
