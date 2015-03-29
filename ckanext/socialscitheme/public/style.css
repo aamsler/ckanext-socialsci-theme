@@ -72,11 +72,16 @@ body {
 	color: #fff;
 	font-size: 14px;
 	font-weight: bold;
-	margin-left: 44%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
 }
 
 .header__top-link p {
-padding-top: 6px;
+	padding-top: 6px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 290px;
 }
 
 .header__top-link a {
@@ -107,7 +112,6 @@ padding-top: 6px;
 	margin-top: 10px;
 }
 
-
 .header__content-topmenu ul li a,
 .header__content-metamenu ul li a {
 	color: #434343;
@@ -117,6 +121,13 @@ padding-top: 6px;
 .header__content-topmenu ul li:last-child,
 .header__content-metamenu ul li:last-child {
 	border-right: 2px solid #4a8fbe;
+}
+
+.header__content h3 {
+	margin: 0px;
+	color: #434343;
+	font-size: 17px;
+	padding: 10px 10px 0px;
 }
 
 .logo-title {
@@ -172,6 +183,7 @@ padding-top: 6px;
 .header__content-tags ul {
 	list-style-type: none;
 	margin-bottom: 0px;
+	padding-left: 0px;
 }
 
 .header__content-tags ul li {
