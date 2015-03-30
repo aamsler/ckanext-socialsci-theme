@@ -61,7 +61,7 @@ body {
 	color: #c4c3c5;
 	font-size: 14px;
 	font-weight: bold;
-	decoration: none;
+	text-decoration: none;
 }
 
 .header__top-language ul li:last-child {
@@ -115,7 +115,7 @@ body {
 .header__content-topmenu ul li a,
 .header__content-metamenu ul li a {
 	color: #434343;
-	decoration: none;
+	text-decoration: none;
 }
 
 .header__content-topmenu ul li:last-child,
@@ -277,6 +277,10 @@ a.button {
 	color: #434343;
 	font-size: 17px;
 	padding: 10px 10px 0px 10px;
+}
+
+.data-box a {
+	text-decoration: none;
 }
 
 .data-box p.data-meta-infos {
