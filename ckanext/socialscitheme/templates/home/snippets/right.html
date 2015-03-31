@@ -7,6 +7,6 @@
 </div>
 
 {% block projects %}
-  {% set groups = h.get_biggest_groups(3) %}
+  {% set groups = h.get_newest_groups(3) %}
   {% snippet "group/snippets/group_list.html", groups=groups %}
 {% endblock %}

@@ -10,15 +10,16 @@ def get_biggest_groups(n):
     context = {'user': user['name']}
     data_dict = {
         'all_fields': True,
+        'sort': 'packages'
     }
     groups = tk.get_action('group_list')(context, data_dict)
     if len(groups) > n:
-        return sorted(groups, key=lambda group: group['packages'])[-1:-(n+1):-1]
+        return groups[-1:-(n+1):-1]
     else:
-        return sorted(groups, key=lambda group: group['packages'])[::-1]
+        return groups[::-1]
 
 
-def get_newest_groups():
+def get_newest_groups(n):
     """Returns the n most recently updated groups, to display on start page."""
     user = tk.get_action('get_site_user')({'ignore_auth': True}, {})
     context = {'user': user['name']}
@@ -26,10 +27,19 @@ def get_newest_groups():
         'all_fields': True,
     }
     groups = tk.get_action('group_list')(context, data_dict)
+
+    # The group_list action does not return an updated/created date for the groups.
+    # This is probably super slow but let's try it.
+    for group in groups:
+        data_dict = {
+            'id': group['id']
+        }
+        group['last_revision'] = tk.get_action('group_revision_list')(context, data_dict)[0]['timestamp']
+
     if len(groups) > n:
-        return sorted(groups, key=lambda group: group['packages'])[-1:-(n+1):-1]
+        return sorted(groups, key=lambda group: group['last_revision'])[-1:-(n+1):-1]
     else:
-        return sorted(groups, key=lambda group: group['packages'])[::-1]
+        return sorted(groups, key=lambda group: group['last_revision'])[::-1]
 
 
 def get_newest_datasets():
@@ -64,5 +74,6 @@ class SocialSciThemePlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm):
 
     def get_helpers(self):
         return {
-            'get_biggest_groups': get_biggest_groups
+            'get_biggest_groups': get_biggest_groups,
+            'get_newest_groups': get_newest_groups
         }
