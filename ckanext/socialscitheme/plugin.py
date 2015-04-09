@@ -42,12 +42,34 @@ def get_newest_groups(n):
         return sorted(groups, key=lambda group: group['last_revision'])[::-1]
 
 
-def get_newest_datasets():
-    pass
+def get_popular_datasets(n):
+    """Returns the n most viewed datasets, to display on start page."""
+    user = tk.get_action('get_site_user')({'ignore_auth': True}, {})
+    context = {'user': user['name']}
+    data_dict = {
+        'sort': 'views_total desc',
+        'q': 'type:dataset'
+    }
+    datasets = tk.get_action('package_search')(context, data_dict)['results']
+    if len(datasets) > n:
+        return datasets[-1:-(n+1):-1]
+    else:
+        return datasets[::-1]
 
 
-def get_most_used_datasets():
-    pass
+def get_newest_datasets(n):
+    """Returns the n most recently created datasets, to display on start page."""
+    user = tk.get_action('get_site_user')({'ignore_auth': True}, {})
+    context = {'user': user['name']}
+    data_dict = {
+        'sort': 'metadata_created desc',
+        'q': 'type:dataset'
+    }
+    datasets = tk.get_action('package_search')(context, data_dict)['results']
+    if len(datasets) > n:
+        return datasets[-1:-(n+1):-1]
+    else:
+        return datasets[::-1]
 
 
 class SocialSciThemePlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm):
@@ -75,5 +97,7 @@ class SocialSciThemePlugin(plugins.SingletonPlugin, tk.DefaultDatasetForm):
     def get_helpers(self):
         return {
             'get_biggest_groups': get_biggest_groups,
-            'get_newest_groups': get_newest_groups
+            'get_newest_groups': get_newest_groups,
+            'get_popular_datasets': get_popular_datasets,
+            'get_newest_datasets': get_newest_datasets
         }

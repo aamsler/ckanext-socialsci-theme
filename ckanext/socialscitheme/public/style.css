@@ -272,7 +272,7 @@ a.button {
 	margin-left: 60px;
 }
 
-.data-box h3 {
+.data-box h3 a {
 	margin: 0px;
 	color: #434343;
 	font-size: 17px;
@@ -283,7 +283,9 @@ a.button {
 	text-decoration: none;
 }
 
-.data-box p.data-meta-infos {
+.data-box p.data-meta-infos,
+.data-box ul.data-meta-infos,
+.data-box ul.data-meta-infos li {
 	margin-top: 6px;
 	font-size: 13px;
 	font-weight: bold;
