@@ -4849,4 +4849,4 @@ msgstr ""
 
 #: ckanext-socialsci-theme/ckanext/socialscitheme/templates/home/snippets/upper:27
 msgid "search. explore. reuse."
-msgtr "chercher. explorer. réutiliser."
+msgstr "chercher. explorer. réutiliser."
