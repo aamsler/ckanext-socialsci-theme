@@ -336,11 +336,13 @@ footer {
 	padding-left: 0px;
 }
 
-.footer__links ul li {
+.footer__links ul li,
+.footer__links ul li a {
 	color: #fff;
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 22px;
+	text-decoration: none;
 }
 
 .footer__text p {
