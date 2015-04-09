@@ -24,7 +24,7 @@
         <div class="container">
           <div class="grid">
             <div class="grid__col grid__col--4-of-5 grid__col--centered header__content-claim">
-              <p>search. explore. reuse.</p>
+              <p>{{ _('search. explore. reuse.') }}</p>
               <form class="module-content search-form" method="get" action="{% url_for controller='package', action='search' %}">
               <div class="header__content-search">
                 <input type="text" class="search" name="q" value="" autocomplete="off" placeholder="Search" />
