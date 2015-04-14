@@ -46,6 +46,15 @@ Example:
               {{ h.popular('recent views', package.tracking_summary.recent, min=10) if package.tracking_summary }}
             {% endblock %}
           </h3>
+        {% endblock %}{% block package_tags %}
+          {% set tags = package.tags %}
+        <div>
+          <ul class="tags">
+            {% for tag in tags %}
+              <li><a class="tag" href="{% url_for controller='package', action='search', tags=tag.name %}">{{ h.truncate(tag.display_name, 22) }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
         {% endblock %}
         {% block resources %}
           {% if package.resources and not hide_resources %}

@@ -102,11 +102,12 @@ body {
 .header__top-link a:hover {
 	text-decoration: none;
 }
+
 /*****HEADER CONTENT*****/
 .header__content {
 	background-image: url("images/pattern1.jpg");
-	min-height: 630px;
 	background-size: 40px;
+	padding-bottom: 30px;
 }
 
 .header__content-topmenu ul {
@@ -216,29 +217,39 @@ body {
     border-bottom: none;
 }
 
-.header__content-tags ul {
+.header__content-tags ul,
+.content__data ul.tags {
 	list-style-type: none;
 	margin-bottom: 0px;
+	margin-top: 0px;
 	padding-left: 0px;
 }
 
-.header__content-tags ul li {
+.header__content-tags ul li,
+.content__data ul.tags li {
 	margin-right: 5px;
 	display: inline;
 	line-height: 30px;
+	padding-left: 0px;
+	padding-right: 0px;
 }
 
-.header__content-tags ul li a {
+.header__content-tags ul li a,
+.content__data ul.tags li a {
 	border: 1px solid #4a8fbe;
 	text-decoration: none;
+	background-color: #FFF;
+	color: #06968a;
 	color: #4a8fbe;
 	padding: 2px 8px;
 	font-size: 14px;
+	font-weight: normal;
 	border-radius: 10px;
 	display: inline;
 }
 
-.header__content-tags ul li a:hover {
+.header__content-tags ul li a:hover,
+.content__data ul.tags li a:hover {
 	background-color: #4a8fbe;
 	color: #FFF;
 }
