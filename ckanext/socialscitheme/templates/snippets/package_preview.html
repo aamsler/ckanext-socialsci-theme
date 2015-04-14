@@ -16,7 +16,9 @@ Example:
 {% set truncate = truncate or 180 %}
 {% set truncate_title = truncate_title or 80 %}
 {% set title = package.title or package.name %}
-{% set group = package.groups[0].display_name %}
+{% if package.groups %}
+  {% set group = package.groups[0].display_name %}
+{% endif %}
 {% set notes = h.markdown_extract(package.notes, extract_length=truncate) %}
 
 {% block package_item %}
