@@ -6,7 +6,8 @@
 
 {% block styles %}
   {{ super() }}
-  <link href="/normalize.css" rel="stylesheet" type="text/css">
-  <link href="/grid.css" rel="stylesheet">
-  <link href="/style.css" rel="stylesheet" type="text/css">
+
+  {% resource 'socialscitheme/css/normalize.css' %}
+  {% resource 'socialscitheme/css/grid.css' %}
+  {% resource 'socialscitheme/css/style.css' %}
 {% endblock %}

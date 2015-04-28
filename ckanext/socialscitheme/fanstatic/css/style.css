@@ -125,7 +125,7 @@ body {
 
 /*****HEADER CONTENT*****/
 .header__content {
-	background-image: url("images/pattern1.jpg");
+	background-image: url("/images/pattern1.jpg");
 	background-size: 40px;
 	padding-bottom: 30px;
 }
@@ -222,7 +222,7 @@ body {
     height: 38px;
     width:38px;
 	margin-top: 0px;
-	background-image: url("images/search-icon.png");
+	background-image: url("/images/search-icon.png");
 	background-repeat: no-repeat;
 	background-color: white;
 	position: absolute;
@@ -242,12 +242,17 @@ body {
 }
 
 .header__content-tags ul,
-.content__data ul.tags {
+. ul.tags {
 	list-style-type: none;
 	margin-bottom: 0px;
 	margin-top: 0px;
 	margin-left: 0px;
-	padding-left: 0px;
+}
+
+.header__content-tags ul,
+.content__data .dataset-tags {
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 .header__content-tags ul li,
@@ -286,7 +291,16 @@ body {
 }
 
 .data-menu {
-	margin-bottom: 90px;
+	margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.container .tab-content {
+	display: block;
+}
+
+.data-menu li.active a {
+	color: #434343;
 }
 
 .content__data ,
@@ -298,15 +312,18 @@ body {
 .content__project ul {
 	list-style-type: none;
 	margin-top: 30px;
+	margin-left: 0;
+	margin-left: 0;
+	display: inline;
 }
 
 .content__data ul li,
 .content__project ul li {
-	float: left;
 	padding: 0 20px;
 	line-height: 30px;
 	font-size: 18px;
 	font-weight: bold;
+	display: inline;
 }
 
 .content__data ul li a,
@@ -333,18 +350,24 @@ a.button:hover {
 	background-color: #70A7CD;
 }
 
+.data-menu a.button {
+    display: inline;
+    margin-top: -4px;
+}
+
 .data-box {
-	min-height: 95px;
 	background-color: #fff;
 	margin-top: 10px;
-	margin-left: 60px;
+	margin-left: 20px;
+	padding-top: 10px;
 }
 
 .data-box h3 a {
 	margin: 0px;
 	color: #434343;
 	font-size: 16px;
-	padding: 10px 10px 0px 10px;
+	padding: 0px 10px 0px 10px;
+	display: block;
 }
 
 .data-box a {
@@ -373,9 +396,9 @@ a.button:hover {
 .data-box p.data-count {
 	font-size: 12px;
 	color: #808184;
-	float: right;
+	text-align: right;
 	padding-right: 10px;
-
+	padding-bottom: 10px;
 }
 
 /*****FOOTER*****/
