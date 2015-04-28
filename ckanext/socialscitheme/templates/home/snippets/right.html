@@ -1,12 +1,25 @@
-<div class="data-menu">
-  <ul>
-    <li class="first"><a href="#">Projects with more Datasets</a></li>
-    <li><a href="#">Newest Projects</a></li>
-  </ul>
-  <a href="/group" class="button">All Projects</a>
-</div>
+{% extends "home/snippets/tab-content.html" %}
 
-{% block projects %}
+{% set suffix = 'right' %}
+
+{% block all_items_link %}
+  <a href="/group" class="button">All Projects</a>
+{% endblock %}
+
+{% block first_option_title %}
+  Projects with more Datasets
+{% endblock %}
+
+{% block second_option_title %}
+  Newest Projects
+{% endblock %}
+
+{% block first_option_items %}
+  {% set groups = h.get_biggest_groups(3) %}
+  {% snippet "group/snippets/group_list.html", groups=groups %}
+{% endblock %}
+
+{% block second_option_items %}
   {% set groups = h.get_newest_groups(3) %}
   {% snippet "group/snippets/group_list.html", groups=groups %}
 {% endblock %}
