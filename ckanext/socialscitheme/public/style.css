@@ -13,6 +13,26 @@ body {
 	padding: 0 30px;
 }
 
+.container .primary {
+    display: inline-block;
+    width: 80%;
+    float: right;
+    margin-left: -1px;
+    border-left: 1px solid #CCC;
+}
+
+.container .secondary {
+    width: 20%;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    margin-right: -1px;
+}
+
+.module-heading {
+	border-right: 1px solid #ccc;
+}
+
 /*****ACCOUNT HEADER*****/
 .account-masthead {
     min-height: 30px;
