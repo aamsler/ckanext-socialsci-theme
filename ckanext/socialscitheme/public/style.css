@@ -213,6 +213,7 @@ body {
 	padding: 0 20px;
 	font-size: 22px;
 	border: 2px solid #4a8fbe;
+	background-color: white;
 }
 
 .header__content-search button {
@@ -222,9 +223,12 @@ body {
     width:38px;
 	margin-top: 0px;
 	background-image: url("images/search-icon.png");
+	background-repeat: no-repeat;
+	background-color: white;
 	position: absolute;
 	top: 18px;
 	right: 18px;
+	border: none;
 }
 
 .header__content-search {
